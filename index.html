@@ -8,52 +8,83 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- 2. 부트스트랩 js연결하기 -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="./sidebars/sidebars.css">
+
   <style>
     *{margin: 0;padding: 0;}
-    h1{font-size: 16px;padding-top: 10px;}
-    h1 img{width: 120px;}
+    h1{padding-top: 10px;}
+    html{background: rgb(229, 164, 255);}
+    body{
+      width: 80%; 
+      margin: 20px auto;
+      border-radius: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
   </style>
 </head>
 <body>
   <!-- 상단 헤더영역 -->
   <header>
-    <h1 class="text-center">부트스트랩 v5.3.3<br>
-      <img src="./images/bootstrap-logo-shadow.png" alt="">
-    </h1>
+    <a href="#" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom justify-content-center">
+      <img src="./images/bootstrap-logo-shadow.png" alt="부트스트랩 로고" width="60">
+      <h1 class="fs-5 fw-semibold">부트스트랩 v5.3.3</h1>
+    </a>
+    
   </header>
 
   <!-- 메인영역 -->
   <main>
-    <section>
-      <dl>
-        <dt>부트스트랩 1일차</dt>
-        <dd><a href="./0607/01_부트스트랩 소개와 장단점.html" title="01_부트스트랩 소개와 장단점">01_부트스트랩 소개와 장단점</a></dd>
-        <dd><a href="./0607/02_그리드레이아웃(반응형).html" title="02_그리드레이아웃(반응형)">02_그리드레이아웃(반응형)</a></dd>
-        <dd><a href="./0607/03_실습하기_반응형 그리드 갤러리.html" title="03_실습하기_반응형 그리드 갤러리">03_실습하기_반응형 그리드 갤러리</a></dd>
-        <dt>부트스트랩 2일차</dt>
-        <dd><a href="./0608/05_문단_텍스트관련.html" title="05_문단_텍스트관련">05_문단_텍스트관련</a></dd>
-        <dd><a href="./0608/06_테이블 관련.html" title="06_테이블 관련">06_테이블 관련</a></dd>
-        <dd><a href="./0608/07_이미지 관련.html" title="07_이미지 관련">07_이미지 관련</a></dd>
-        <dd><a href="./0608/08_버튼관련.html" title="08_버튼관련">08_버튼관련</a></dd>
-        <dd><a href="./0608/09_페이지네이션.html" title="09_페이지네이션">09_페이지네이션</a></dd>
-        <dt>부트스트랩 3일차</dt>
-        <dd><a href="" title=""></a></dd>
-        <dd><a href="" title=""></a></dd>
-        <dt>부트스트랩 4일차</dt>
-        <dd><a href="" title=""></a></dd>
-        <dd><a href="" title=""></a></dd>
-      </dl>
-    </section>
+    <ul class="list-unstyled ps-0">
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+          부트스트랩 1일차
+        </button>
+        <div class="collapse show" id="home-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="./0607/01_부트스트랩 소개와 장단점.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded">01_부트스트랩 소개와 장단점</a></li>
+            <li><a href="./0607/02_그리드레이아웃(반응형).html" class="link-body-emphasis d-inline-flex text-decoration-none rounded">02_그리드레이아웃(반응형)</a></li>
+            <li><a href="./0607/03_실습하기_반응형 그리드 갤러리.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded">03_실습하기_반응형 그리드 갤러리</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="border-top my-3"></li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+          부트스트랩 2일차
+        </button>
+        <div class="collapse" id="dashboard-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="./0608/05_문단_텍스트관련.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded">05_문단_텍스트관련</a></li>
+            <li><a href="./0608/06_테이블 관련.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded">06_테이블 관련</a></li>
+            <li><a href="./0608/07_이미지 관련.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded">07_이미지 관련</a></li>
+            <li><a href="./0608/08_버튼관련.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded">08_버튼관련</a></li>
+            <li><a href="./0608/09_페이지네이션.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded">09_페이지네이션</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="border-top my-3"></li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+          부트스트랩 3일차
+        </button>
+        <div class="collapse" id="orders-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">내용</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">내용</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">내용</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">내용</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="border-top my-3"></li>
+    </ul>
+
   </main>
 
   <!-- 푸터영역 -->
   <footer></footer>
 
-  <script>
-    $(document).ready(function(){
-
-      
-    })
-  </script>
 </body>
 </html>
